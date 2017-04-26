@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="school_diary" transaction-type="RESOURCE_LOCAL">
+        <class>database_lab_work.Model.Discipline</class>
+        <class>database_lab_work.Model.Mark</class>
+        <class>database_lab_work.Model.Person</class>
+        <class>database_lab_work.Model.SchoolClass</class>
+        <class>database_lab_work.Model.Specialty</class>
+        <class>database_lab_work.Model.Teacher</class>
+        <class>database_lab_work.Model.Student</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/school_diary" />
+            <property name="javax.persistence.jdbc.user" value="admin" />
+            <property name="javax.persistence.jdbc.password" value="gaben1337" />
+
+            <!--&lt;!&ndash; EclipseLink should create the database schema automatically &ndash;&gt;-->
+            <!--<property name="eclipselink.ddl-generation" value="create-tables" />-->
+            <!--<property name="eclipselink.ddl-generation.output-mode" value="database" />-->
+        </properties>
+
+    </persistence-unit>
+</persistence>
